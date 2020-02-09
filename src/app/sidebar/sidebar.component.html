@@ -1,0 +1,46 @@
+<!-- <div class="toggle-btn" (click)="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div> -->
+<div>
+    <button class="toggle-btn" (click)="toggleSidebar()">
+        <span>___</span>
+        <span>___</span>
+        <span>___</span>
+    </button>
+</div>
+<div id="sidebar" *ngIf="isShown">
+    <div class="analyse">
+        <h5>ANALYSE</h5>
+    </div>
+    <br>
+    <div>
+        <ul>
+            <li id="active">Select Campaign</li>
+            <li id="ul1">Campaign Details</li>
+            <li id="ul1">Performance Summary</li>
+            <li id="ul1">Sites</li>
+            <li id="ul1">Audience</li>
+            <li id="ul1">Time</li>
+            <li id="ul1">Attribution</li>
+            <li id="ul1">Ads</li>
+            <br>
+        </ul>
+    </div>
+    <div>
+        <i class="fa fa-home"></i>
+    </div>
+    <!-- <div id="ul2">
+        <ul>
+            <li>
+                <i class="fa fa-home"></i>
+            </li>
+            <br>
+            <li>
+                <i class="fa fa-question-circle"></i> FAQ & Knowledge Base
+            </li>
+        </ul>
+    </div> -->
+
+</div>

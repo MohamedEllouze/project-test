@@ -1,0 +1,206 @@
+<div id="wrapper" [ngClass]="ref.click === true ? 'toggled' : ''">
+  <div
+    class="overlay"
+    [ngStyle]="{ disply: ref.click === true ? 'block' : 'none' }"
+  ></div>
+
+  <!-- Sidebar -->
+  <nav
+    style="margin-top: 52px; background: #00463D    ;"
+    class="navbar navbar-inverse navbar-fixed-top"
+    id="sidebar-wrapper"
+    role="navigation"
+  >
+    <ul class="nav sidebar-nav">
+      <li class="sidebar-brand" style="background: #00463D ;">
+        <a href="#" style="background: #00463D ;">
+          ANALYSE
+        </a>
+      </li>
+      <li>
+        <a style="background: #000F4A;" href="#"
+          ><i class="fa fa-circle"> </i> &nbsp;&nbsp;&nbsp;Select Campaign
+          <i
+            style="position: absolute; right: 25px; top: 15px;"
+            class="fa fa-chevron-right"
+          ></i>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          ><i class="fa fa-bullseye"> </i> &nbsp;&nbsp;&nbsp;Campaign Details</a
+        >
+      </li>
+      <li>
+        <a href="#"
+          ><i class="fa fa-bullseye"> </i> &nbsp;&nbsp;&nbsp;Performance
+          Summary</a
+        >
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-bullseye"> </i> &nbsp;&nbsp;&nbsp;SItes</a>
+      </li>
+      <!-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li> -->
+      <li>
+        <a href="#"
+          ><i class="fa fa-bullseye"> </i> &nbsp;&nbsp;&nbsp;Audiance</a
+        >
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-bullseye"> </i> &nbsp;&nbsp;&nbsp;Time</a>
+      </li>
+      <li>
+        <a href="#"
+          ><i class="fa fa-bullseye"> </i> &nbsp;&nbsp;&nbsp;Attribution</a
+        >
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-bullseye"> </i> &nbsp;&nbsp;&nbsp;Ads</a>
+      </li>
+
+      <br /><br /><br /><br />
+
+      <li>
+        <button
+          type="button"
+          class="btn btn-light"
+          style="width: 150px; border-radius: 20px;
+                position: absolute; right: 40px; "
+        >
+          Get Custom Report
+        </button>
+      </li>
+      <br /><br /><br />
+      <li>
+        <a href="#" style="color: white; font-weight: bold; margin-left: -15px;"
+          ><i class="fa fa-question-circle"></i>&nbsp;&nbsp;&nbsp;FAQ &
+          Knowledge Base</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <button
+      appSidebar
+      #ref="appSidebar"
+      style="margin-top: 50px;"
+      type="button"
+      class="hamburger is-closed"
+      data-toggle="offcanvas"
+    >
+      <span class="hamb-top"></span>
+      <span class="hamb-middle"></span>
+      <span class="hamb-bottom"></span>
+    </button>
+    <div class="container" style="width: 100%;">
+      <div class="row" style="margin-top: 90px;">
+        <div class="col-lg-10 col-lg-offset-2" style="margin: 5%;width: 90%;">
+          <div>
+            Home&nbsp;&nbsp; Campaigns
+            <button
+              class="btn btn-primary"
+              style="font-weight: bold; border-radius: 20px;
+                        position: absolute; right: 10px;"
+            >
+              Add Campaign
+            </button>
+          </div>
+
+          <div style="font-size: 20px; font-weight: bold;">CAMPAIGNS</div>
+          <br />
+          <br />
+          <ul class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active"><a href="#">All</a></li>
+            <li role="presentation"><a href="#">Ongoing</a></li>
+            <li role="presentation"><a href="#">Completed</a></li>
+            <li role="presentation"><a href="#">Historical</a></li>
+          </ul>
+
+          <br /><br />
+
+          <div class="form-row">
+            <div class="form-group col-sm-5">
+              <label for="inputEmail4">Number campaigns</label>
+              <input type="text" class="form-control" placeholder="search..." />
+            </div>
+            <div class="form-group col-sm-2">
+              <label for="inputPassword4">Filter by location</label>
+              <select class="form-control">
+                <option>Kuantan</option>
+                <option>Georgetown</option>
+                <option>Malacca</option>
+                <option>Kota Kinabalu</option>
+              </select>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="inputEmail4">Filter by campaign date</label>
+              <select class="form-control">
+                <option>Last day</option>
+                <option>Last week</option>
+                <option>Last month</option>
+                <option>Last year</option>
+              </select>
+            </div>
+            <div class="form-group col-sm-2">
+              <label for="inputEmail4">sort by</label>
+              <select class="form-control">
+                <option>Kuantan</option>
+                <option>Georgetown</option>
+                <option>Malacca</option>
+                <option>Kota Kinabalu</option>
+              </select>
+            </div>
+          </div>
+
+          <table
+            class="table table-strip"
+            style="width: 100%;border-radius: 10px;"
+          >
+            <div class="bg-dark text-white" style="width: 100%;display: flex;">
+              <div style="width: 40%;padding: 20px;color: gray;">Name</div>
+              <div style="width: 20%;padding: 20px;color: gray;">Duration</div>
+              <div style="width: 20%;padding: 20px;color: gray;">Status</div>
+            </div>
+
+            <div
+              class="alert alert-primary"
+              role="alert"
+              *ngFor="let conducteur of this.posts"
+              style="width: 100%;border-radius: 10px;background-color: #e1e8e1;"
+            >
+              <td style="width: 20%;height: 50px;">
+                <img
+                  style="width: 50%;height:100%;"
+                  src="{{ conducteur.imageURL }}"
+                />
+              </td>
+              <td style="width: 20%;">
+                <span style="font-weight: bold;">{{ conducteur.name }}</span>
+              </td>
+              <td style="width: 20%;">{{ conducteur.daysToCompleted }}</td>
+              <td style="width: 20%;">
+                {{ conducteur.startingTime }}-{{ conducteur.finishingTime }}
+              </td>
+              <td style="width: 20%;">{{ conducteur.finishingTime }}</td>
+            </div>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
